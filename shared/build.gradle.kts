@@ -1,6 +1,9 @@
+import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
+
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("org.jetbrains.compose")
 }
 
 group = "org.example"
@@ -13,24 +16,30 @@ java {
     }
 }
 
+@OptIn(ExperimentalWasmDsl::class)
 kotlin {
 
     androidTarget()
 
     wasm {
         binaries.executable()
-        browser {
-            commonWebpackConfig(
-                Action {
-                    outputFileName = "shared.js"
-                }
-            )
-        }
+        browser()
     }
 
     sourceSets {
+        val commonMain by getting {
+            dependencies {
+
+                // Compose
+                api(compose.runtime)
+                api(compose.foundation)
+                api(compose.ui)
+                api(compose.material)
+            }
+        }
+
         val androidMain by getting
-        val commonMain by getting
+
         val wasmMain by getting
     }
 }

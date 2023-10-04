@@ -1,6 +1,10 @@
-import kotlinx.browser.document
-import kotlinx.dom.appendText
+import androidx.compose.material.Text
+import androidx.compose.ui.ExperimentalComposeUiApi
+import androidx.compose.ui.window.CanvasBasedWindow
 
+@OptIn(ExperimentalComposeUiApi::class)
 fun main() {
-    document.body?.appendText("Hello, World!")
+    CanvasBasedWindow("Test") {
+        Text("Olá, mundo!")
+    }
 }
