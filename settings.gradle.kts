@@ -19,4 +19,6 @@ plugins {
 }
 
 rootProject.name = "KMP-Empty-Project"
-include("shared")
+
+include(":shared")
+include(":android")
