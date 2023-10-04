@@ -17,9 +17,21 @@ kotlin {
 
     androidTarget()
 
+    wasm {
+        binaries.executable()
+        browser {
+            commonWebpackConfig(
+                Action {
+                    outputFileName = "shared.js"
+                }
+            )
+        }
+    }
+
     sourceSets {
         val androidMain by getting
         val commonMain by getting
+        val wasmMain by getting
     }
 }
 

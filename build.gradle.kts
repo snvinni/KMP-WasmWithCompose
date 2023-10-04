@@ -7,3 +7,10 @@ plugins {
 
 group = "org.example"
 version = "1.0-DEV"
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
