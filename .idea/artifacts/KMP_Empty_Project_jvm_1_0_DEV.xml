@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="KMP-Empty-Project-jvm-1.0-DEV">
+    <output-path>$PROJECT_DIR$/build/libs</output-path>
+    <root id="archive" name="KMP-Empty-Project-jvm-1.0-DEV.jar" />
+  </artifact>
+</component>
