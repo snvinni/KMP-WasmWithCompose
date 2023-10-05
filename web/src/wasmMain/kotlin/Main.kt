@@ -5,6 +5,6 @@ import androidx.compose.ui.window.CanvasBasedWindow
 @OptIn(ExperimentalComposeUiApi::class)
 fun main() {
     CanvasBasedWindow("Test") {
-        Text("Olá, mundo!")
+        App()
     }
 }

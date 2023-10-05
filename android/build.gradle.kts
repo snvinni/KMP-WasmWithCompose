@@ -1,4 +1,5 @@
 plugins {
+    id("org.jetbrains.compose")
     id("com.android.application")
     kotlin("android")
 }
@@ -30,13 +31,18 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
+
+    buildFeatures {
+        compose = true
+    }
 }
 
 dependencies {
-
     implementation(project(":shared"))
 
+    // Compose
     implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.activity:activity-compose:1.6.1")
 
     // Test
     testImplementation("junit:junit:4.13.2")
