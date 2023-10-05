@@ -17,5 +17,4 @@ plugins {
 rootProject.name = "RickAndMortyKMP"
 
 include(":shared")
-include(":android")
 include(":web")

@@ -2,7 +2,6 @@ import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 
 plugins {
     kotlin("multiplatform")
-    id("com.android.library")
     id("org.jetbrains.compose")
 }
 
@@ -18,8 +17,6 @@ java {
 
 @OptIn(ExperimentalWasmDsl::class)
 kotlin {
-
-    androidTarget()
 
     wasm {
         binaries.executable()
@@ -37,14 +34,6 @@ kotlin {
                 api(compose.material)
             }
         }
-
-        val androidMain by getting
-
         val wasmMain by getting
     }
-}
-
-android {
-    namespace = "org.example.shared"
-    compileSdk = 33
 }
