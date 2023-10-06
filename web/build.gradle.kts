@@ -19,19 +19,11 @@ kotlin {
     }
 
     sourceSets {
-        val commonMain by getting {
+        val wasmMain by getting  {
             dependencies {
                 implementation(project(":shared"))
-
-                // Compose
-                implementation(compose.runtime)
-                implementation(compose.foundation)
-                implementation(compose.ui)
-                implementation(compose.material)
             }
         }
-
-        val wasmMain by getting
     }
 }
 

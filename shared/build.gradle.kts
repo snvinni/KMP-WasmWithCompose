@@ -22,7 +22,6 @@ kotlin {
     androidTarget()
 
     wasm {
-        binaries.executable()
         browser()
     }
 
