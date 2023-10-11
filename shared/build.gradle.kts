@@ -25,6 +25,8 @@ kotlin {
         browser()
     }
 
+    jvm()
+
     sourceSets {
         val commonMain by getting {
             dependencies {
@@ -40,6 +42,12 @@ kotlin {
         val androidMain by getting
 
         val wasmMain by getting
+
+        val jvmMain by getting {
+            dependencies {
+                api(compose.desktop.common)
+            }
+        }
     }
 }
 
