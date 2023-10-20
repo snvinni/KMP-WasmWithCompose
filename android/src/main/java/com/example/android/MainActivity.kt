@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             MaterialTheme {
-               App()
+               App(Modifier.fillMaxSize())
             }
         }
     }
