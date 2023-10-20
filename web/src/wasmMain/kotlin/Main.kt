@@ -1,10 +1,14 @@
-import androidx.compose.material.Text
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.MaterialTheme
 import androidx.compose.ui.ExperimentalComposeUiApi
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.window.CanvasBasedWindow
 
 @OptIn(ExperimentalComposeUiApi::class)
 fun main() {
     CanvasBasedWindow("Test") {
-        Text("Olá, mundo!")
+        MaterialTheme {
+            HelloWorld(Modifier.fillMaxSize())
+        }
     }
 }
