@@ -19,7 +19,6 @@ java {
 kotlin {
 
     wasm {
-        binaries.executable()
         browser()
     }
 
@@ -34,6 +33,7 @@ kotlin {
                 api(compose.material)
             }
         }
+
         val wasmMain by getting
     }
 }

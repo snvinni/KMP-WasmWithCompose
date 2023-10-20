@@ -22,12 +22,6 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 api(project(":shared"))
-
-                // Compose
-                api(compose.runtime)
-                api(compose.foundation)
-                api(compose.ui)
-                api(compose.material)
             }
         }
 
